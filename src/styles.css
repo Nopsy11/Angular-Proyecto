@@ -1,0 +1,23 @@
+/* body */
+body{
+    text-align: center;
+}
+
+/* form */
+form{
+    background-color: antiquewhite;
+    display: inline-block;
+    padding: 1%;
+}
+
+form > label{
+    padding-bottom: 2%;
+}
+
+.añadirDisplayNone{
+    display: none;
+}
+
+.añadirDisplayBlock{
+    display: block;
+}

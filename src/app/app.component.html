@@ -1,0 +1,24 @@
+<h1>Catalogo del almacén</h1>
+
+<div id="formulario">
+  <h3>Añadir nuevos productos</h3>
+  <form [formGroup]="data" (ngSubmit)="submit()">
+   <p>Nombre del producto:</p>
+   <input type="text" name="nombreProducto" value="Introduce el nombre del producto" formControlName="nombreProducto">
+   <br> <br>
+   <input type="submit" value="Enviar">
+  </form>
+</div>
+
+<br>
+
+<div id="valores" *ngFor="let values of informacion; let i=index">
+  <div class="valor">
+    <span class="contenidoValues">{{values}}</span>
+    <div class="formularioModificarProducto añadirDisplayNone">
+      <input type="text" class="modificandoProducto">
+    </div>
+    <button id="{{i}}" (click)="eliminarProducto($event)">Eliminar</button>
+    <button id="{{i}}" (click)="modificarProducto($event)">Modificar</button>
+  </div>
+</div>
